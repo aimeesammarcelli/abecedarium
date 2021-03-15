@@ -24,13 +24,14 @@ h1, h2, h3, h4, h5 {
   
   .abcontainer{
     display: grid;
-    grid-gap: 10px 15px;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) ;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)) ;
+    grid-gap: 40px;
   }
 
 
   .abcontainer div{
-    padding: 7vw;
+    padding: 6vw;
     color: white;
     background-color: #000;
     border: 1px white solid;
