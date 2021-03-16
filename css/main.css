@@ -18,6 +18,13 @@ h1, h2, h3, h4, h5 {
     font-size: 50px;
   }
 
+  label{
+    font-family: decovar, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 5vw!important;
+  }
+
   body{
     background-color: #000;
   }
@@ -35,6 +42,7 @@ h1, h2, h3, h4, h5 {
     color: white;
     background-color: #000;
     border: 1px white solid;
+    border-radius: 2px;
   }
 
 
@@ -46,7 +54,6 @@ input[type="radio"] {
   display:none;
 }
 label {
-width:23%;
 float:left;
 text-align:center;
 background:#ffffff;
@@ -57,8 +64,9 @@ margin:0.5%;
 margin-bottom:30px;
 cursor:pointer;
 }
+
 input[type="radio"][id="all"]:checked + label {
-background:#6666ff;
+background:yellow;
 }
 input[type="radio"][id="all"]:checked ~ .consonant, input[type="radio"][id="all"]:checked ~ .vowel {
 width:0;
@@ -68,22 +76,22 @@ margin:0;
 opacity:0;
 }
 input[type="radio"][id="consonant"]:checked + label {
-background:#ff4466;
+background:yellow;
 }
 input[type="radio"][id="consonant"]:checked ~ .all, input[type="radio"][id="consonant"]:checked ~ .vowel {
 width:0;
 height:0;
 padding:0;
 margin:0;
-opacity:0;
+display: none;
 }
 input[type="radio"][id="vowel"]:checked + label {
-background:#66dd99;
+background:yellow;
 }
 input[type="radio"][id="vowel"]:checked ~ .all, input[type="radio"][id="vowel"]:checked ~ .consonant {
 width:0;
 height:0;
 padding:0;
 margin:0;
-opacity:0;
+display: none;
 }
