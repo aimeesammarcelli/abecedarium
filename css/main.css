@@ -12,11 +12,19 @@
     src: url('fonts/decovar/DecovarAlpha-VF.ttf') format('truetype') /* Super Modern Browsers */
   }
 
-h1, h2, h3, h4, h5 {
+h1, h3, h4, h5 {
     font-family: decovar, sans-serif;
     font-weight: 400;
     font-size: 50px;
   }
+
+
+ a{
+   font-family: decovar, sans-serif;
+   font-weight: 300;
+   font-size: 16px;
+ } 
+
 
   label{
     font-family: decovar, sans-serif;
@@ -38,60 +46,52 @@ h1, h2, h3, h4, h5 {
 
 
   .abcontainer div{
-    padding: 6vw;
+    padding: 4vw;
     color: white;
     background-color: #000;
     border: 1px white solid;
     border-radius: 2px;
+    text-align: center;
   }
 
 
-  /* filtre */
+  a{
+    text-decoration: none;
+    color: yellow;
+  }
 
 
+  @font-face {
+    font-family: "IBM Plex Sans Roman";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf");
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
 
-input[type="radio"] {
-  display:none;
-}
-label {
-float:left;
-text-align:center;
-background:#ffffff;
-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-color:#222222;
-padding:0.5%;
-margin:0.5%;
-margin-bottom:30px;
-cursor:pointer;
-}
-
-input[type="radio"][id="all"]:checked + label {
-background:yellow;
-}
-input[type="radio"][id="all"]:checked ~ .consonant, input[type="radio"][id="all"]:checked ~ .vowel {
-width:0;
-height:0;
-padding:0;
-margin:0;
-opacity:0;
-}
-input[type="radio"][id="consonant"]:checked + label {
-background:yellow;
-}
-input[type="radio"][id="consonant"]:checked ~ .all, input[type="radio"][id="consonant"]:checked ~ .vowel {
-width:0;
-height:0;
-padding:0;
-margin:0;
-display: none;
-}
-input[type="radio"][id="vowel"]:checked + label {
-background:yellow;
-}
-input[type="radio"][id="vowel"]:checked ~ .all, input[type="radio"][id="vowel"]:checked ~ .consonant {
-width:0;
-height:0;
-padding:0;
-margin:0;
-display: none;
-}
+  
+  h2 {
+    font-family: "IBM Plex Sans Roman", Times;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 100;
+    font-size: 10vw;
+    font-variation-settings: 'wght' 100, 'wdth' 85;
+    animation: breathe 4000ms infinite forwards;
+  }
+  
+  @keyframes breathe {
+    60% {
+      font-variation-settings: 'wght' 700, 'wdth' 100;
+    }
+    
+    100% {
+      font-variation-settings: 'wght' 100, 'wdth' 85;
+    }
+  }
+  
+  
