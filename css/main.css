@@ -1,88 +1,104 @@
- @font-face {
-    font-family: marvin;
-    font-style: normal;
-    font-weight: 400;
-    src: url('fonts/marvin/MarvinVisionsBig-Bold.woff') format('woff') /* Super Modern Browsers */
-  }
+/* Root */
 
-  @font-face {
-    font-family: decovar;
-    font-style: normal;
-    font-weight: 400;
-    src: url('fonts/decovar/DecovarAlpha-VF.ttf') format('truetype') /* Super Modern Browsers */
-  }
+:root{
+  --yellow:yellow;
+  --black:#000;
+  --white:#fff;
+}
+
+/* Fonts */
+
+
+@font-face {
+  font-family: "IBM Plex Sans Roman";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf");
+}
+
+@font-face {
+  font-family: marvin;
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/marvin/MarvinVisionsBig-Bold.woff') format('woff') /* Super Modern Browsers */
+}
+
+@font-face {
+  font-family: decovar;
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/decovar/DecovarAlpha-VF.ttf') format('truetype') /* Super Modern Browsers */
+}
 
 h1, h3, h4, h5 {
-    font-family: decovar, sans-serif;
-    font-weight: 400;
-    font-size: 50px;
-  }
+  font-family: decovar, sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: "IBM Plex Sans Roman", Times;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 100;
+  font-size: 10vw;
+  font-variation-settings: 'wght' 100, 'wdth' 85;
+  animation: breathe 4000ms infinite forwards;
+}
 
 
- a{
-   font-family: decovar, sans-serif;
-   font-weight: 300;
-   font-size: 16px;
- } 
+a{
+  font-family: SF-Pro-Display,sans-serif;
+ font-weight: 300;
+ font-size: 16px;
+ text-decoration: none;
+ color: var(--yellow);
+} 
 
 
-  label{
-    font-family: decovar, sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    padding-top: 5vw!important;
-  }
+label{
+  font-family: decovar, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 5vw!important;
+}
+
+
+
+/* Grid */
+
+
+.abcontainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) ;
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)) ;
+  grid-gap: 40px;
+}
+
+
+/* Styles */
+
 
   body{
-    background-color: #000;
+    background-color: var(--black);
+    margin:20px;
   }
   
-  .abcontainer{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) ;
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)) ;
-    grid-gap: 40px;
+  * {
+    box-sizing: border-box;
   }
-
 
   .abcontainer div{
     padding: 4vw;
-    color: white;
-    background-color: #000;
+    color: var(--white);
+    background-color: var(--black);
     border: 1px white solid;
     border-radius: 2px;
     text-align: center;
   }
 
 
-  a{
-    text-decoration: none;
-    color: yellow;
-  }
-
-
-  @font-face {
-    font-family: "IBM Plex Sans Roman";
-    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf");
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-
-  
-  h2 {
-    font-family: "IBM Plex Sans Roman", Times;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: 100;
-    font-size: 10vw;
-    font-variation-settings: 'wght' 100, 'wdth' 85;
-    animation: breathe 4000ms infinite forwards;
-  }
+  /* Animations */
   
   @keyframes breathe {
     60% {
@@ -93,5 +109,8 @@ h1, h3, h4, h5 {
       font-variation-settings: 'wght' 100, 'wdth' 85;
     }
   }
-  
+
+
+  /* Responsive */
+
   
